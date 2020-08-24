@@ -1,3 +1,3 @@
 #!/bin/bash
-cd $HOME
+cd $HOME/mysql-docker
 docker-compose -f wpdb.yml up -d

@@ -1,4 +1,4 @@
 #!/bin/bash
-cd $HOME
+cd $HOME/mysql-docker
 docker build -t wpdb8021 -f Dockerfile.wpdb .
 
