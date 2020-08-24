@@ -1,0 +1,3 @@
+#!/bin/bash
+cd $HOME
+docker-compose -f wpdb.yml down

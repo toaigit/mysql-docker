@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $HOME
+docker build -t wpdb8021 -f Dockerfile.wpdb .
+

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  wpressdb:
+     image: wpdb8021
+     command: '--default-authentication-plugin=mysql_native_password'
+     container_name: wpressdb
+     volumes:
+       - /apps/mysql/data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
