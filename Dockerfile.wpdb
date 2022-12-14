@@ -1,4 +1,4 @@
-FROM mysql:8.0.21
+FROM mysql:8.0.31
 COPY my.cnf /etc/mysql/my.cnf
 RUN usermod -u 1001 mysql && \
     groupmod -g 1001 mysql
