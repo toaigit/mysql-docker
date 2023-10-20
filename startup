@@ -1,3 +1,6 @@
 #!/bin/bash
-cd $HOME/mysql-docker
+#  Should be in the directory where the script is.
+
+. ./mysql.env
+
 docker compose -f wpdb.yml up -d

@@ -1,4 +1,10 @@
 #!/bin/bash
-cd $HOME/mysql-docker
-docker build -t wpdb8021 -f Dockerfile.wpdb .
+#
+. ./mysql.env
+
+mkdir -p $MYSQL_DATA
+
+sed  "s:MYSQL_DATA:$MYSQL_DATA:" wpdb.yml.templ > wpdb.yml
+
+docker build -t wpdb -f Dockerfile.wpdb .
 
