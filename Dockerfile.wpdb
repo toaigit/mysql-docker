@@ -1,4 +1,7 @@
 FROM mysql:8.0.34
+ARG USERID
+ARG GROUPID
+
 COPY my.cnf /etc/mysql/my.cnf
-RUN usermod -u 1001 mysql && \
-    groupmod -g 1001 mysql
+RUN usermod -u $USERID mysql && \
+    groupmod -g $GROUPID mysql

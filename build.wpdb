@@ -6,5 +6,6 @@ mkdir -p $MYSQL_DATA
 
 sed  "s:MYSQL_DATA:$MYSQL_DATA:" wpdb.yml.templ > wpdb.yml
 
-docker build -t wpdb -f Dockerfile.wpdb .
+docker build -t wpdb --build-arg USERID=$USERID \
+                     --build-arg GROUPID=$GROUPID -f Dockerfile.wpdb .
 
